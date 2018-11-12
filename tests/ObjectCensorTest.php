@@ -7,6 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class ObjectCensorTest extends TestCase
 {
+
     private $container;
 
     public function setUp()
@@ -19,12 +20,12 @@ class ObjectCensorTest extends TestCase
      * @dataProvider \Tests\TextProvider::get
      */
     public function doTest(
-        array $censoredWords,
-        string $text,
-        string $validCensoredText
-    ) {
-        $censor = $this->container->get(ObjectCensor::class);
+    array $censoredWords, string $text, string $validCensoredText
+    )
+    {
+        $censor       = $this->container->get(ObjectCensor::class);
         $censoredText = $censor->__invoke($censoredWords, $text);
         $this->assertEquals($censoredText, $validCensoredText);
     }
+
 }

@@ -13,3 +13,4 @@
 .settings
 .buildpath
 .php_cs.cache
+/nbproject/
