@@ -14,10 +14,10 @@
     "require-dev": {
         "jakub-onderka/php-parallel-lint": "*",
         "phpunit/phpunit": "*",
-        "friendsofphp/php-cs-fixer" : "*",
+        "friendsofphp/php-cs-fixer": "*",
         "php-di/php-di": "^6.0"
     },
-    "scripts" : {
+    "scripts": {
         "syntax-check": [
             "parallel-lint src",
             "parallel-lint tests"
@@ -25,11 +25,11 @@
         "phpunit": [
             "phpunit --configuration phpunit.xml tests"
         ],
-        "style-fixer" : [
+        "style-fixer": [
             "php-cs-fixer fix --config=php_cs_config.php_cs src",
             "php-cs-fixer fix --config=php_cs_config.php_cs tests"
         ],
-        "ci" : [
+        "ci": [
             "composer syntax-check",
             "composer phpunit",
             "composer style-fixer"

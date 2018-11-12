@@ -4,6 +4,7 @@ namespace Tests;
 
 class TextProvider
 {
+
     public static function get()
     {
         return [
